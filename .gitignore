@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Student PII — rosters must never enter version control
+next_class.csv
+*roster*.csv
+
+# Firebase config / credentials
+GoogleService-Info.plist
+*-serviceaccount.json
+serviceAccount*.json
+.env
+.env.local
+.env.*.local
+*.pem
+*.p8
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.xcarchive
