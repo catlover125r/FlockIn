@@ -21,3 +21,9 @@ xcuserdata/
 DerivedData/
 build/
 *.xcarchive
+
+# The admin dashboard is its own repository (FlockIn_adminDashboard) and holds
+# .env.local with the Firebase service account private key. This repo is PUBLIC
+# — the App Store support and privacy-policy URLs point at it — so the whole
+# directory stays out, node_modules and all.
+admin-dashboard/

@@ -209,7 +209,8 @@ enum DemoData {
                 time: soonTime,
                 location: "Terremere Field",
                 // Deliberately no coordinates. Check-in on a located event
-                // requires standing within 200m of it, which a reviewer sitting
+                // requires standing inside the geofence (see
+                // LocationManager.checkInRadiusMeters), which a reviewer sitting
                 // at a desk cannot do — this is the one they can complete.
                 isActive: true,
                 hours: 3,

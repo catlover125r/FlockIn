@@ -25,7 +25,7 @@ struct EventDetailView: View {
 
     private var canCheckIn: Bool {
         currentEvent.isActive &&
-        (!event.hasCoordinate || locationManager.isWithin200m(of: event.coordinate))
+        (!event.hasCoordinate || locationManager.isWithinCheckInRadius(of: event.coordinate))
     }
 
     var body: some View {
@@ -45,7 +45,7 @@ struct EventDetailView: View {
 
                     VStack(spacing: 8) {
                         if !currentEvent.isActive {
-                            Text("Check-in available when event starts & you're within 200m")
+                            Text("Check-in available when event starts & you're within \(Int(LocationManager.checkInRadiusMeters))m")
                                 .font(.system(size: 12))
                                 .foregroundStyle(Color(.secondaryLabel))
                                 .multilineTextAlignment(.center)
